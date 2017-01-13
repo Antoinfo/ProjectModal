@@ -3,7 +3,7 @@ $(document).ready(function () {
     $("#somme-form").submit(function () {
         if ($("#id").val() !== "") {
             $.getJSON('scripts/getTabVotes.php', {id: $("#id").val()}, function (data) {
-                alert("toto");
+                
                 key=data.question.publicKey;
                 keyLogged= new BigInteger(key)
                 pubKey = new paillier.publicKey(1024, keyLogged);
