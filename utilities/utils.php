@@ -1,11 +1,15 @@
 <?php
 $page_list= array(array("name"=>"accueil","title"=>"Accueil"), array("name"=>"a_propos","title"=>"À propos"), array("name"=>"votes","title"=>"Votes disponibles"),array("name"=>"creervotes","title"=>"Ajouter des questions"), array("name"=>"resultats","title"=>"Résultats"), array("name"=>"register","title"=>"Création d'un compte"), array("name"=>"admin","title"=>"Gestion admin du site"));
 function generateHTMLHeader($pageTitle) {
-echo <<<FIN
+    echo <<<FIN
+    <!DOCTYPE html>
     <html>
     <head>
     	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.5/angular.min.js"></script>
    	<script src="app.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+        <script src="js/code.js"></script>
         <script src="js/md5.js"></script>
         <script type="text/javascript" src="js/jsbn/jsbn.js"></script>
         <script type="text/javascript" src="js/jsbn/jsbn2.js"></script>
@@ -22,9 +26,9 @@ echo <<<FIN
 		<link href="css/bootstrap.css" rel="stylesheet">
 		<link href="css/shop-item.css" rel="stylesheet">
 	</head>
-   
-   
-    <body ng-app="app" ng-controller="Main as main">     
+
+
+    <body ng-app="app" ng-controller="Main as main">
 FIN;
 }
 function generateMenu($askedPage){
@@ -42,8 +46,8 @@ echo <<<FIN
                 </button>
                 <a class="navbar-brand" href="index.php">Voting - Plateforme de vote sécurisé</a>
             </div>
-            
-            
+
+
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
@@ -88,11 +92,9 @@ echo <<<FIN
 
     	<!-- Bootstrap Core JavaScript -->
     	<script src="js/bootstrap.min.js"></script>
-    	
+
     </body>
 </html>
 FIN;
 }
 ?>
-
-
