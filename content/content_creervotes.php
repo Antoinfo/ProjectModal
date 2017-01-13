@@ -65,21 +65,7 @@ echo <<<FIN
                         </br></br>
 
 
-        <form class="form-inline">
-                <p>
-                    </br>
-                    <label>Vote</label>
-                    <input data-id="vote" type="text" name="vote" class="form-control" ng-model="vote" />
-                    </br>
-                    <label>Clé publique</label>
-                    <input data-id="key" type="text" name="token" class="form-control" ng-model="key" />
-                    </br></br>
-                    <input type="submit" ng-click="encode()" value="Chiffrer" />
-                </p>
-        </form>
-
-
-        <p> {{ chiffre.toString() }} </p>
+        
 
 FIN;
 

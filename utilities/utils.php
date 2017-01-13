@@ -5,7 +5,9 @@ echo <<<FIN
     <html>
     <head>
     	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.5/angular.min.js"></script>
-   	<script src="app.js"></script>
+   <script src="js/jquery.js"></script>
+    <script src="js/code.js"></script>
+   <script src="app.js"></script>
         <script src="js/md5.js"></script>
         <script type="text/javascript" src="js/jsbn/jsbn.js"></script>
         <script type="text/javascript" src="js/jsbn/jsbn2.js"></script>
