@@ -1,10 +1,14 @@
 <?php
 header('Content-Type: application/json');
-require_once('utilities/bdd.php');
-
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
+require_once('../utilities/bdd.php');
+    if (isset($_GET['id']))
+    {
+        $return['votes']=Votes::getVotes($_GET['id']);
+        $return['question']=Questions::getPubKey($_GET['id']);
+    }
+    else{
+        $votes=null;
+        $question=null;
+    }
+    echo json_encode($return);
+?>

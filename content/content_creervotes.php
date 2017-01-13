@@ -18,9 +18,9 @@ echo <<<FIN
             </br>
 
             <div class="col-md-12">
-                <p class="lead">Clé publique : {{ pub }}</p>
+                <div id="pub">Clé publique : </div>
                 </br></br>
-                <p class="lead">Clé privée : {{ priv }}</p>
+                <div id="sec">Clé privée : </div>
                 </br></br>
             </div>
 
@@ -41,7 +41,7 @@ echo <<<FIN
                                 <div class="form-group">
                                         
                                     <label for="exampleInputName2">Question</label>
-                                    <input type="text" ng-model="main.prenom" placeholder="Question" id="Question" name="Question" class="form-control">
+                                    <input type="text" placeholder="Question" id="Question" name="Question" class="form-control">
                                     </br>
                                     </br>
                                 </div>
@@ -63,10 +63,6 @@ echo <<<FIN
                             </form>
                         </div>
                         </br></br>
-
-
-        
-
 FIN;
 
 

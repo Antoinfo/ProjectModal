@@ -6,7 +6,9 @@ function generateHTMLHeader($pageTitle) {
     <html>
     <head>
     	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.5/angular.min.js"></script>
-
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+        <script src="js/code.js"></script>
         <script src="js/md5.js"></script>
         <script type="text/javascript" src="js/jsbn/jsbn.js"></script>
         <script type="text/javascript" src="js/jsbn/jsbn2.js"></script>
@@ -23,9 +25,8 @@ function generateHTMLHeader($pageTitle) {
 		<link href="css/bootstrap.css" rel="stylesheet">
 		<link href="css/shop-item.css" rel="stylesheet">
 	</head>
-
-
-    <body ng-app="app" ng-controller="Main as main">
+   
+       
 FIN;
 }
 function generateMenu($askedPage){

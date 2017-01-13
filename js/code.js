@@ -3,6 +3,7 @@ $(document).ready(function () {
     $("#somme-form").submit(function () {
         if ($("#id").val() !== "") {
             $.getJSON('scripts/getTabVotes.php', {id: $("#id").val()}, function (data) {
+                alert("toto");
                 key=data.question.publicKey;
                 keyLogged= new BigInteger(key)
                 pubKey = new paillier.publicKey(1024, keyLogged);
@@ -27,7 +28,6 @@ $(document).ready(function () {
             key = $("#key").val();
             secKey = $("#secKey").val();
             resultatChiffre = $("#input-resultats").val();
-            console.log(resultatChiffre);
             keyLogged = new BigInteger(key);
             pubKey = new paillier.publicKey(1024, keyLogged);
             keySec = new BigInteger(secKey);
@@ -37,4 +37,18 @@ $(document).ready(function () {
             $("#zone-results").html(res.toString());
             return false;
     });
+    var keys = paillier.generateKeys(1024);
+    $("#pub").html(keys.pub.n.toString());
+    $("#sec").html(keys.sec.lambda.toString());
+    
+    $("#encode-form").submit(function () {
+            key = $("#key").val();
+            clair = $("#vote").val();
+            keyLogged = new BigInteger(key);
+            pubKey = new paillier.publicKey(1024, keyLogged);
+            chiffre=pubKey.encrypt(nbv(clair));
+            $("#zone-chiffre").html(chiffre.toString());
+            return false;
+    });
+    
 });
