@@ -1,2 +1,1 @@
-# ModalInfoVotingV2
 # ProjectModal
