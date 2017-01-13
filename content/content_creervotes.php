@@ -36,7 +36,7 @@ echo <<<FIN
                         </br>
 
 
-                            <form action="index.php?page=votes" method="post" class="form-inline">
+                            <form action="index.php?page=creervotes" method="post" class="form-inline">
 
                                 <div class="form-group">
                                         
