@@ -24,7 +24,7 @@
  <p>Nom : <input type="text" name="nom" required /></p>
  <p>Email : <input type="text" name="email" required /></p>
  <p>
-  <label for="password1">Password:</label>
+  <label for="password1">Password (at least 10 caracters):</label>
   <input id="password1" type="password" required name="mdp">
  </p>
  <p>

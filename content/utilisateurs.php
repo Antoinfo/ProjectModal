@@ -115,17 +115,30 @@ function creercompte($dbh) {
       $nom=$_POST['nom'];
       $email=$_POST['email'];
       
-      if (Utilisateur::isUtilisateur($dbh,$login)){
-          echo"<p>login déjà utilisé !</p>";
+        if (Utilisateur::isUtilisateur($dbh,$login)){
+            echo"<p>login déjà utilisé !</p>";
+        }
+         else {
+            if (strlen($mdp)>9){
+                Utilisateur::insererUtilisateur($dbh,$login,$nom,$mdp,$email);
+          
+                echo"<p>Vous avez créé un compte, félicitations !</p>";
+             }
+      
+            else if (strlen($mdp)<=9) { 
+                echo"<p>Votre mot de passe fait moins de 10 caractères</p>";
+            }
+      
+         }
       }
-      else {
-      Utilisateur::insererUtilisateur($dbh,$login,$nom,$mdp,$email);
-      echo"<p>Vous avez créé un compte, félicitations !</p>";
-      }
-      }
+      
+      
+      
+      
       else {
           echo"<p>Vous n'êtes pas connecté ou il manque des infos !</p>";
       }
+      
       
   }
   
