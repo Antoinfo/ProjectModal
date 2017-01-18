@@ -20,6 +20,8 @@ class Questions {
 public $id_Quesions;
 public $Question;
 public $publicKey;
+public $Choix0;
+public $Choix1;
 
 
 public static function getQuestions($dbh, $id_Questions) {
@@ -34,15 +36,37 @@ return $user;
 
 }
 
-public static function getPubKey($id_Questions) {
+public static function getPubKey($dbh, $id_Questions) {
 $dbh = Database::connect();
-$query = "SELECT * FROM `Questions` WHERE `id_Questions`=?";
+$query = "SELECT publicKey FROM `Questions` WHERE `id_Questions`=?";
 $sth = $dbh->prepare($query);
 $sth->setFetchMode(PDO::FETCH_CLASS, 'Questions');
 $sth->execute(array($id_Questions));
-$user = $sth->fetch();
+$pub = $sth->fetch();
 $sth->closeCursor();
-return $user;
+return $pub;
+}
+
+public static function getChoix0($dbh, $id_Questions) {
+$dbh = Database::connect();
+$query = "SELECT `Choix0` FROM `Questions` WHERE `id_Questions`=?";
+$sth = $dbh->prepare($query);
+$sth->setFetchMode(PDO::FETCH_CLASS, 'Questions');
+$sth->execute(array($id_Questions));
+$choix = $sth->fetch();
+$sth->closeCursor();
+return $choix;
+}
+
+public static function getChoix1($id_Questions) {
+$dbh = Database::connect();
+$query = "SELECT `Choix1` FROM `Questions` WHERE `id_Questions`=?";
+$sth = $dbh->prepare($query);
+$sth->setFetchMode(PDO::FETCH_CLASS, 'Questions');
+$sth->execute(array($id_Questions));
+$choix = $sth->fetch();
+$sth->closeCursor();
+return $choix;
 }
 
 public static function addQuestions($dbh, $Question, $publicKey) {
@@ -72,7 +96,7 @@ return $user;
 
 }
 
-public static function addQuestions($dbh, $token, $id_Questions) {
+public static function addToken($dbh, $token, $id_Questions) {
 $dbh = Database::connect();
 $query = "INSERT INTO `token` (`token`, `id_Questions`) VALUES(?, ?)";
 $sth = $dbh->prepare($query);
