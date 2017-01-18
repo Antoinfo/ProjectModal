@@ -31,12 +31,6 @@ echo <<<FIN
             <p> Identifiant :
 FIN;
             echo htmlspecialchars($donnees['id_Questions']); 
-echo <<<FIN
-            </p>
-            <p>
-                        Clé publique: 
-FIN;
-            echo htmlspecialchars($donnees['publicKey']); 
             } // Fin de la boucle des billets
     $req->closeCursor();
     echo "</div>";
@@ -74,14 +68,10 @@ echo <<<FIN
                     </select>
                     </br>
                     <label>Vote:</label>
-                    <select name="Choix">
-FIN;
-            while ($donnees = $req->fetch())
-        {
-            echo "<option value=".$donnees['id_Questions'].">".$donnees['id_Questions']."</option>";
-        } // Fin de la boucle des billets
-    $req->closeCursor();
-echo <<<FIN
+                    <select id="Choix" onChange="choix()">
+                    <option value=0>0</option>
+                    <option value=1>1</option>
+
                     </select>
                     </br>
                     <label>Vote chiffré</label>
