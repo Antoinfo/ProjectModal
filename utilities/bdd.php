@@ -36,9 +36,9 @@ return $user;
 
 }
 
-public static function getPubKey($dbh, $id_Questions) {
+public static function getPubKey($id_Questions) {
 $dbh = Database::connect();
-$query = "SELECT publicKey FROM `Questions` WHERE `id_Questions`=?";
+$query = "SELECT * FROM `Questions` WHERE `id_Questions`=?";
 $sth = $dbh->prepare($query);
 $sth->setFetchMode(PDO::FETCH_CLASS, 'Questions');
 $sth->execute(array($id_Questions));

@@ -40,7 +40,7 @@ FIN;
             } // Fin de la boucle des billets
     $req->closeCursor();
     echo "</div>";
-    $req = $dbh->query('SELECT id_Questions FROM Questions ORDER BY id_Questions DESC LIMIT 0, 5');
+    $req = $dbh->query('SELECT id_Questions, Choix0, Choix1 FROM Questions ORDER BY id_Questions DESC');
 echo <<<FIN
             
             </p>
@@ -64,6 +64,17 @@ echo <<<FIN
                 <p>
                     <label>Identifiant de la question :</label>
                     <select name="id_Questions">
+FIN;
+            while ($donnees = $req->fetch())
+        {
+            echo "<option value=".$donnees['id_Questions'].">".$donnees['id_Questions']."</option>";
+        } // Fin de la boucle des billets
+    $req->closeCursor();
+echo <<<FIN
+                    </select>
+                    </br>
+                    <label>Vote:</label>
+                    <select name="Choix">
 FIN;
             while ($donnees = $req->fetch())
         {

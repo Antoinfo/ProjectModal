@@ -55,4 +55,16 @@ $(document).ready(function () {
             alert("veuillez conserver cette clé privée bien précieusement :  "+keys.sec.lambda.toString())
     });
     
+  document.getElementById("id_Questions").onchange=function() {
+    var period = this.value;
+    if (period=="") return; // please select - possibly you want something else here
+
+    var report = "script/"+((period == "daily")?"d":"m")+"_report.php";
+    loadXMLDoc(report,'responseTag');
+    document.getElementById('responseTag').style.visibility='visible';
+    document.getElementById('list_report').style.visibility='hidden';
+    document.getElementById('formTag').style.visibility='hidden'; 
+  } 
+
+    
 });
