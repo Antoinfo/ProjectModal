@@ -1,6 +1,5 @@
 <?php
-require('utilities/bdd.php') ;
-require('js/paillier.js') ;
+
 
 if (!isset($_SESSION['loggedIn'])) {
   echo "Page non autorisée, vous devez vous connecter pour répondre aux questions";
@@ -92,19 +91,18 @@ $pub=$_POST['PublicKey'];
 echo($pub);
 
 
-<<<<<<< HEAD
 
 
     if (isset($_POST['Question']) AND isset($_POST['Choix0']) AND isset($_POST['Choix1']))
     {
             Questions::addQuestions($dbh, $_POST['Question'], $_POST['publicKey'], $_POST['Choix0'], $_POST['Choix1']);
     }
-=======
+
     //if (isset($_POST['Question']) AND isset($_POST['publicKey']))
     //{
     //        Questions::addQuestions($dbh, $_POST['Question'], $_POST['publicKey']);
     //}
->>>>>>> f89944f025e6c710ce07b5b7e42d4f5fcf130853
+
     
    
                     
