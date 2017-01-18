@@ -24,6 +24,7 @@ public $Choix0;
 public $Choix1;
 
 
+
 public static function getQuestions($dbh, $id_Questions) {
 $dbh = Database::connect();
 $query = "SELECT * FROM `Questions` WHERE `id_Questions`=?";
@@ -47,7 +48,7 @@ $sth->closeCursor();
 return $pub;
 }
 
-public static function getChoix0($dbh, $id_Questions) {
+public static function getChoix0($id_Questions) {
 $dbh = Database::connect();
 $query = "SELECT `Choix0` FROM `Questions` WHERE `id_Questions`=?";
 $sth = $dbh->prepare($query);

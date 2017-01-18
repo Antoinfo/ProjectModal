@@ -1,5 +1,6 @@
 <?php
 
+
 if (!isset($_SESSION['loggedIn'])) {
   echo "Page non autorisée, vous devez vous connecter pour répondre aux questions";
   return;
@@ -81,7 +82,6 @@ FIN;
 
 
 
-
     if (isset($_POST['Question']) AND isset($_POST['Choix0']) AND isset($_POST['Choix1']))
     {
             Questions::addQuestions($dbh, $_POST['Question'], $_POST['PublicKey'], $_POST['Choix0'], $_POST['Choix1']);
@@ -91,6 +91,7 @@ FIN;
     //{
     //        Questions::addQuestions($dbh, $_POST['Question'], $_POST['publicKey']);
     //}
+
     
    
                     
