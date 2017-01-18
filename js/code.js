@@ -51,5 +51,8 @@ $(document).ready(function () {
             $("#zone-chiffre").html(chiffre.toString());
             return false;
     });
+    $("#create-question").submit(function () {
+            alert("veuillez conserver cette clé privée bien précieusement :  "+keys.sec.lambda.toString())
+    });
     
 });

@@ -1,6 +1,4 @@
 <?php
-require('utilities/bdd.php') ;
-require('js/paillier.js') ;
 
 if (!isset($_SESSION['loggedIn'])) {
   echo "Page non autorisée, vous devez vous connecter pour répondre aux questions";
@@ -11,22 +9,9 @@ if (!isset($_SESSION['loggedIn'])) {
 echo <<<FIN
 <div class="container">
 
-        <div class="row">
+       
 
-            <div class="col-md-3">
-                <p class="lead"><h4>Votes</h4></p>
-                </br></br>
-            </div>
-            
-            </br>
-            </br>
 
-            <div class="col-md-12">
-                <div id="pub">Clé publique : </div>
-                </br></br>
-                <div id="sec">Clé privée : </div>
-                </br></br>
-            </div>
 
             </br>
 			</br>
@@ -40,7 +25,7 @@ echo <<<FIN
                         </br>
 
 
-                            <form action="index.php?page=creervotes" method="post" class="form-inline">
+                            <form action="index.php?page=creervotes" method="post" id="create-question" class="form-inline">
 
                                 <div class="form-group">
                                         
@@ -69,7 +54,12 @@ echo <<<FIN
                                     </br>
                                 </div>
 
-
+                                <div class="form-group">
+                                        
+                                    <input type="hidden" placeholder="PublicKey" id="PublicKey" name="PublicKey" class="form-control">
+                                    </br>
+                                    </br>
+                                </div>
 
                                 <div class="form-group col-md-12">
                                     </br>
@@ -82,29 +72,25 @@ echo <<<FIN
                         </br></br>
 
 
-$pub;
 FIN;
 
 
 
-$pub=$_POST['PublicKey'];
-
-echo($pub);
 
 
-<<<<<<< HEAD
+
+
 
 
     if (isset($_POST['Question']) AND isset($_POST['Choix0']) AND isset($_POST['Choix1']))
     {
-            Questions::addQuestions($dbh, $_POST['Question'], $_POST['publicKey'], $_POST['Choix0'], $_POST['Choix1']);
+            Questions::addQuestions($dbh, $_POST['Question'], $_POST['PublicKey'], $_POST['Choix0'], $_POST['Choix1']);
     }
-=======
+
     //if (isset($_POST['Question']) AND isset($_POST['publicKey']))
     //{
     //        Questions::addQuestions($dbh, $_POST['Question'], $_POST['publicKey']);
     //}
->>>>>>> f89944f025e6c710ce07b5b7e42d4f5fcf130853
     
    
                     
