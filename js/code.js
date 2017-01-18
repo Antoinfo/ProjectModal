@@ -39,6 +39,7 @@ $(document).ready(function () {
     });
     var keys = paillier.generateKeys(1024);
     $("#pub").html(keys.pub.n.toString());
+    document.getElementById('PublicKey').value=keys.pub.n.toString()
     $("#sec").html(keys.sec.lambda.toString());
     
     $("#encode-form").submit(function () {

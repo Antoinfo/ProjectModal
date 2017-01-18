@@ -67,15 +67,15 @@ FIN;
 
 
 
+$pub=$_POST['PublicKey'];
+
+echo($pub);
 
 
-
-
-
-    if (isset($_POST['Question']) AND isset($_POST['publicKey']))
-    {
-            Questions::addQuestions($dbh, $_POST['Question'], $_POST['publicKey']);
-    }
+    //if (isset($_POST['Question']) AND isset($_POST['publicKey']))
+    //{
+    //        Questions::addQuestions($dbh, $_POST['Question'], $_POST['publicKey']);
+    //}
     
    
                     
