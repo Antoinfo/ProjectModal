@@ -20,6 +20,8 @@ class Questions {
 public $id_Quesions;
 public $Question;
 public $publicKey;
+public $Choix0;
+public $Choix1;
 
 
 public static function getQuestions($dbh, $id_Questions) {
@@ -45,12 +47,12 @@ $sth->closeCursor();
 return $user;
 }
 
-public static function addQuestions($dbh, $Question, $publicKey) {
+public static function addQuestions($dbh, $Question, $publicKey, $Choix0, $Choix1) {
 $dbh = Database::connect();
-$query = "INSERT INTO `Questions` (`Question`, `publicKey`) VALUES(?, ?)";
+$query = "INSERT INTO `Questions` (`Question`, `publicKey`,`Choix0`, `Choix1`) VALUES(?, ?, ?, ?)";
 $sth = $dbh->prepare($query);
 $sth->setFetchMode(PDO::FETCH_CLASS, 'Questions');
-$sth->execute(array($Question, $publicKey));
+$sth->execute(array($Question, $publicKey, $Choix0, $Choix1));
 $sth->closeCursor();
 
 }
