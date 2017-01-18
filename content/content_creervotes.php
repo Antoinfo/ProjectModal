@@ -1,8 +1,5 @@
 <?php
-<<<<<<< HEAD
 
-=======
->>>>>>> e0a362766472b8b89a65bfa4033949f8b3b07cd8
 
 if (!isset($_SESSION['loggedIn'])) {
   echo "Page non autorisée, vous devez vous connecter pour répondre aux questions";
@@ -83,10 +80,6 @@ FIN;
 
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> e0a362766472b8b89a65bfa4033949f8b3b07cd8
 
 
     if (isset($_POST['Question']) AND isset($_POST['Choix0']) AND isset($_POST['Choix1']))
@@ -98,10 +91,7 @@ FIN;
     //{
     //        Questions::addQuestions($dbh, $_POST['Question'], $_POST['publicKey']);
     //}
-<<<<<<< HEAD
 
-=======
->>>>>>> e0a362766472b8b89a65bfa4033949f8b3b07cd8
     
    
                     

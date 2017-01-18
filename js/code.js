@@ -1,10 +1,9 @@
 $(document).ready(function () {
-
     $("#somme-form").submit(function () {
         if ($("#id").val() !== "") {
             $.getJSON('scripts/getTabVotes.php', {id: $("#id").val()}, function (data) {
-                
                 key=data.question.publicKey;
+                document.getElementById('PublicKey2').value=key;
                 keyLogged= new BigInteger(key)
                 pubKey = new paillier.publicKey(1024, keyLogged);
                 vote=data.votes[0].vote;
@@ -17,6 +16,7 @@ $(document).ready(function () {
                     res=pubKey.add(res, res1);
                 }
                 $("#zone-resultats").html(res.toString());
+                document.getElementById('input-resultats').value=res.toString();
                 
                 
             });
@@ -25,7 +25,7 @@ $(document).ready(function () {
     });
     
     $("#decode-form").submit(function () {
-            key = $("#key").val();
+            key = $("#PublicKey2").val();
             secKey = $("#secKey").val();
             resultatChiffre = $("#input-resultats").val();
             keyLogged = new BigInteger(key);
