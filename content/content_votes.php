@@ -10,7 +10,7 @@ FIN;
         $dbh = Database::connect();
 
         // On récupère les 5 derniers billets
-        $req = $dbh->query('SELECT id_Questions, Question, publicKey FROM Questions ORDER BY id_Questions DESC LIMIT 0, 5');
+        $req = $dbh->query('SELECT id_Questions, Question, publicKey, Choix0, Choix1 FROM Questions ORDER BY id_Questions DESC LIMIT 0, 5');
 
         while ($donnees = $req->fetch())
         {
@@ -28,8 +28,14 @@ echo <<<FIN
         <p>
             
             
-            <p> Identifiant :
+            <p> Choix 0 :
 FIN;
+            echo htmlspecialchars($donnees['Choix0']);
+            echo "</p>";
+            echo"<p> Choix 1 :";
+            echo htmlspecialchars($donnees['Choix1']);
+            echo "</p>";
+            echo"<p> Identifiant :";
             echo htmlspecialchars($donnees['id_Questions']); 
             } // Fin de la boucle des billets
     $req->closeCursor();
