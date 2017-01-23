@@ -44,48 +44,41 @@ FIN;
 echo <<<FIN
             
             </p>
-            </br>
-<form class="form-inline" id="encode-form">
-                <p>
-                    </br>
-                    <label>Vote</label>
-                    <input id="vote" type="text" name="vote" class="form-control" />
-                    </br>
-                    <label>Clé publique</label>
-                    <input id="key" type="text" name="token" class="form-control" />
-                    </br></br>
-                    <input type="submit" value="Chiffrer" />
-                </p>
-        </form>
 
-        <div id="zone-chiffre"></div>
         </br></br>  
-            <form class="form-inline" action="index.php?page=votes" method="post">
+            <form class="form-inline" method="get" id="encode-form">
                 <p>
                     <label>Identifiant de la question :</label>
-                    <select name="id_Questions">
+                    <select name="id" id="id">
 FIN;
             while ($donnees = $req->fetch())
         {
-            echo "<option value=".$donnees['id_Questions'].">".$donnees['id_Questions']."</option>";
+            echo "<option value=".htmlspecialchars($donnees['id_Questions']).">".htmlspecialchars($donnees['id_Questions'])."</option>";
         } // Fin de la boucle des billets
     $req->closeCursor();
 echo <<<FIN
                     </select>
                     </br>
                     <label>Vote:</label>
-                    <select id="Choix" onChange="choix()">
-                    <option value=0>0</option>
-                    <option value=1>1</option>
+                    <select id="choix">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
 
                     </select>
-                    </br>
+                    </br></br>
+                    <input type="submit" value="Chiffrer" />
+    </p>
+    </form>
+    <div id="zone-chiffre"></div>
+    
+    <form class="form-inline" action="index.php?page=votes" method="post">
                     <label>Vote chiffré</label>
-                    <input type="text" name="vote" class="form-control" />
+                    <input type="text" name="vote" id="vote" class="form-control" />
                     </br>
                     <label>Token</label>
-                    <input type="text" name="token" class="form-control" />
+                    <input type="text" name="token" id="token" class="form-control" />
                     </br></br>
+                    <input type="hidden" name="id_Questions" class="form-control" id="id_Questions" />
                     <input type="submit" value="Voter" />
                 </p>
             </form>

@@ -39,32 +39,33 @@ $(document).ready(function () {
     });
     var keys = paillier.generateKeys(1024);
     $("#pub").html(keys.pub.n.toString());
-    document.getElementById('PublicKey').value=keys.pub.n.toString()
+    if(document.getElementById('PublicKey')!==null){
+        document.getElementById('PublicKey').value=keys.pub.n.toString();
+    }
     $("#sec").html(keys.sec.lambda.toString());
     
     $("#encode-form").submit(function () {
-            key = $("#key").val();
-            clair = $("#vote").val();
+        if ($("#id").val() !== null) {
+            $.getJSON('scripts/getPubKey.php', {id: $("#id").val()}, function (data) {
+            clair = $("#choix").val();
+            key = data.question.publicKey;
             keyLogged = new BigInteger(key);
             pubKey = new paillier.publicKey(1024, keyLogged);
             chiffre=pubKey.encrypt(nbv(clair));
-            $("#zone-chiffre").html(chiffre.toString());
-            return false;
-    });
-    $("#create-question").submit(function () {
-            alert("veuillez conserver cette clé privée bien précieusement :  "+keys.sec.lambda.toString())
+            document.getElementById('vote').value=chiffre.toString();
+            document.getElementById('id_Questions').value=$("#id").val();
+     });
+        }
+        return false;
+            
+            
     });
     
-  document.getElementById("id_Questions").onchange=function() {
-    var period = this.value;
-    if (period=="") return; // please select - possibly you want something else here
-
-    var report = "script/"+((period == "daily")?"d":"m")+"_report.php";
-    loadXMLDoc(report,'responseTag');
-    document.getElementById('responseTag').style.visibility='visible';
-    document.getElementById('list_report').style.visibility='hidden';
-    document.getElementById('formTag').style.visibility='hidden'; 
-  } 
+    $("#create-question").submit(function () {
+            alert("veuillez conserver cette clé privée bien précieusement :  "+keys.sec.lambda.toString());
+    });
+    
+ 
 
     
 });

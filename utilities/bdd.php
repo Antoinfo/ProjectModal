@@ -17,7 +17,7 @@ return $dbh;
 }
 }
 class Questions {
-public $id_Quesions;
+public $id_Questions;
 public $Question;
 public $publicKey;
 public $Choix0;
@@ -25,9 +25,9 @@ public $Choix1;
 
 
 
-public static function getQuestions($dbh, $id_Questions) {
+public static function getQuestions($id_Questions) {
 $dbh = Database::connect();
-$query = "SELECT * FROM `Questions` WHERE `id_Questions`=?";
+$query = "SELECT * FROM Questions WHERE `id_Questions`=?";
 $sth = $dbh->prepare($query);
 $sth->setFetchMode(PDO::FETCH_CLASS, 'Questions');
 $sth->execute(array($id_Questions));
@@ -39,7 +39,7 @@ return $user;
 
 public static function getPubKey($id_Questions) {
 $dbh = Database::connect();
-$query = "SELECT * FROM `Questions` WHERE `id_Questions`=?";
+$query = "SELECT publicKey FROM `Questions` WHERE `id_Questions`=?";
 $sth = $dbh->prepare($query);
 $sth->setFetchMode(PDO::FETCH_CLASS, 'Questions');
 $sth->execute(array($id_Questions));
@@ -126,12 +126,12 @@ return $resultat;
 
 }
 
-public static function addVotes($dbh, $vote, $token, $id_Quesions) {
+public static function addVotes($dbh, $vote, $token, $id_Questions) {
 $dbh = Database::connect();
 $query = "INSERT INTO `Votes` (`vote`, `token`, `id_Questions`) VALUES(?, ?, ?)";
 $sth = $dbh->prepare($query);
 $sth->setFetchMode(PDO::FETCH_CLASS, 'Votes');
-$sth->execute(array($vote, $token, $id_Quesions));
+$sth->execute(array($vote, $token, $id_Questions));
 $sth->closeCursor();
 
 }

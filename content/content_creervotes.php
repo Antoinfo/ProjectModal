@@ -42,7 +42,7 @@ echo <<<FIN
                                   <div class="form-group">
                                         
                                     <label for="exampleInputName2">Choix0</label>
-                                    <input type="text" placeholder="Choix0" id="Question" name="Choix0" class="form-control">
+                                    <input type="text" placeholder="Choix0" id="Choix0" name="Choix0" class="form-control">
                                     </br>
                                     </br>
                                 </div>
@@ -50,7 +50,7 @@ echo <<<FIN
                                 <div class="form-group">
                                         
                                     <label for="exampleInputName2">Choix1</label>
-                                    <input type="text" placeholder="Choix1" id="Question" name="Choix1" class="form-control">
+                                    <input type="text" placeholder="Choix1" id="Choix1" name="Choix1" class="form-control">
                                     </br>
                                     </br>
                                 </div>

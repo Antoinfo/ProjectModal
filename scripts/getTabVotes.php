@@ -4,7 +4,7 @@ require_once('../utilities/bdd.php');
     if (isset($_GET['id']))
     {
         $return['votes']=Votes::getVotes($_GET['id']);
-        $return['question']=Questions::getPubKey($_GET['id']);
+        $return['question']=Questions::getQuestions($_GET['id']);
     }
     else{
         $votes=null;
