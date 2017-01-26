@@ -1,6 +1,6 @@
 <?php
 
-$req = $dbh->query('SELECT id_Questions FROM Questions ORDER BY id_Questions DESC LIMIT 0, 5');
+require_once('utilities/bdd.php');
 
 echo <<<FIN
 <div class="container">
@@ -14,7 +14,7 @@ echo <<<FIN
 
                     <div class="caption-full">
                         </br>
-                            <form class="form-horizontal" action="index.php?page=resultats" method="get" id="somme-form">
+                            <form class="form-horizontal"  method="get" id="somme-form">
                             <fieldset>
 
                             <!-- Form Name -->
@@ -52,21 +52,17 @@ echo <<< FIN
 </p>
                 </br>
                 </br>
-                <p>
-                    voici la somme chiffrée ! (animation cadenas)
-                </p>
                 </div>
 
     	</div>
-FIN;
 
-echo <<< FIN
 <div class="container">
 <div class="row">
 <div class="col-md-12">
 <div class="caption-full">
 <form class="form-horizontal" action="index.php?page=resultats" id="decode-form">
 <fieldset>
+<legend>Résultat clair</legend>
 
 
 <!-- Text input-->
@@ -86,7 +82,15 @@ echo <<< FIN
   <div class="col-md-4">
     <button id="singlebutton" name="singlebutton" class="btn btn-primary">Déchiffer</span></button>
 </br></br>
-<div class="alert alert-success col-md-3" id="zone-results"><strong></strong> </div>
+
+
+<label class='col-md-3 control-label' id='choix1'></label>
+<div class='alert alert-success col-md-3' id='zone-results1'><strong></strong> </div>
+<label class='col-md-3 control-label' id='choix0'></label>
+
+<div class="alert alert-success col-md-3" id="zone-results0"><strong></strong> </div>
+<label class="col-md-3 control-label">nombre votants</label>
+<div class="alert alert-success col-md-3" id="nb-votants"><strong></strong> </div>
   </div>
 </div>
 
@@ -99,11 +103,7 @@ echo <<< FIN
 
 
 </p>
-                </br>
-                </br>
-                <p>
-                    voici le résultat ! (animation cadenas qui s'ouvre)
-                </p>
+   
                 </div>
 
     	</div>

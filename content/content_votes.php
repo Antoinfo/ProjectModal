@@ -98,7 +98,7 @@ FIN;
     if (isset($_POST['vote']) AND isset($_POST['token']))
     {
             // Testons si le fichier n'est pas trop gros
-            Votes::addVotes($dbh, $_POST['vote'], $_POST['token'], $_POST['id_Questions']);
+            Votes::addVotes($_POST['vote'], $_POST['token'], $_POST['id_Questions']);
     }
 
                     

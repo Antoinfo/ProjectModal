@@ -126,7 +126,7 @@ return $resultat;
 
 }
 
-public static function addVotes($dbh, $vote, $token, $id_Questions) {
+public static function addVotes($vote, $token, $id_Questions) {
 $dbh = Database::connect();
 $query = "INSERT INTO `Votes` (`vote`, `token`, `id_Questions`) VALUES(?, ?, ?)";
 $sth = $dbh->prepare($query);

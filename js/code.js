@@ -17,8 +17,9 @@ $(document).ready(function () {
                 }
                 $("#zone-resultats").html(res.toString());
                 document.getElementById('input-resultats').value=res.toString();
-                
-                
+                $("#nb-votants").html(taille);
+                $("#choix1").html(data.question.Choix1);
+                $("#choix0").html(data.question.Choix0);
             });
         }
         return false;
@@ -34,7 +35,9 @@ $(document).ready(function () {
             privKey = new paillier.privateKey(keySec, pubKey);
             resultatChiffre = new BigInteger(resultatChiffre);
             res = privKey.decrypt(resultatChiffre);
-            $("#zone-results").html(res.toString());
+            $("#zone-results1").html(res.toString());
+            taille=document.getElementById('nb-votants').innerHTML;
+            $("#zone-results0").html(taille-parseInt(res.toString()));
             return false;
     });
     var keys = paillier.generateKeys(1024);
