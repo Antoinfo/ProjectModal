@@ -68,5 +68,13 @@ $(document).ready(function () {
             alert("veuillez conserver cette clé privée bien précieusement :  "+keys.sec.lambda.toString());
     });
     
+    $('.fa-lock').hover(function () {
+            $(this).addClass('fa-unlock');
+            $(this).removeClass('fa-lock'); 
+        }, function () {
+            $(this).addClass('fa-lock');
+            $(this).removeClass('fa-unlock');
+        });
+    
     
 });

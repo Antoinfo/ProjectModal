@@ -8,6 +8,7 @@ function generateHTMLHeader($pageTitle) {
     	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.5/angular.min.js"></script>
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
+    
         <script src="js/code.js"></script>
         <script src="js/md5.js"></script>
         <script type="text/javascript" src="js/jsbn/jsbn.js"></script>
@@ -24,6 +25,7 @@ function generateHTMLHeader($pageTitle) {
     	<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/bootstrap.css" rel="stylesheet">
 		<link href="css/shop-item.css" rel="stylesheet">
+            <link href="https://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
 	</head>
    
        
