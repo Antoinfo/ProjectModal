@@ -68,7 +68,5 @@ $(document).ready(function () {
             alert("veuillez conserver cette clé privée bien précieusement :  "+keys.sec.lambda.toString());
     });
     
- 
-
     
 });

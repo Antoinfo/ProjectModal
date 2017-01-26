@@ -14,7 +14,7 @@ echo <<<FIN
 
                     <div class="caption-full">
                         </br>
-                            <form class="form-horizontal"  method="get" id="somme-form">
+                            <form class="form-horizontal" action="index.php?page=resultats" method="get" id="somme-form">
                             <fieldset>
 
                             <!-- Form Name -->
@@ -34,7 +34,7 @@ echo <<<FIN
                                         <div class="col-md-4">
                                             <button id="singlebutton" name="singlebutton" class="btn btn-primary">Afficher</button>
                                             </br></br>
-                                            <div class="alert alert-success col-md-12" id="zone-resultats"></div>
+                                            <div class="alert alert-success  zone-resultats" id="zone-resultats"></div>
                                         </div>
                                         
 

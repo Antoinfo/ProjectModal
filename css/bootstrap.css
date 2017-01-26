@@ -6757,4 +6757,8 @@ button.close {
     display: none !important;
   }
 }
+.zone-resultats {
+    overflow-x: scroll;
+    white-space: nowrap;
+}
 /*# sourceMappingURL=bootstrap.css.map */
