@@ -10,7 +10,7 @@ FIN;
         $dbh = Database::connect();
 
         // On récupère les 5 derniers billets
-        $req = $dbh->query('SELECT id_Questions, Question, publicKey, Choix0, Choix1 FROM Questions ORDER BY id_Questions DESC LIMIT 0, 5');
+        $req = $dbh->query('SELECT id_Questions, Question, publicKey, Choix0, Choix1 FROM Questions ORDER BY id_Questions DESC');
 
         while ($donnees = $req->fetch())
         {
@@ -45,9 +45,14 @@ echo <<<FIN
             
             </p>
 
-        </br></br>  
-            <form class="form-inline" method="get" id="encode-form">
-                <p>
+        </br></br>
+            <div class="container">
+            <div class="row">
+            <div class="col-md-12">
+            <div class="caption-full">
+            <form class="form-horizontal" method="get" id="encode-form">
+                <div class="form-group">
+                    <div class="col-md-4">
                     <label>Identifiant de la question :</label>
                     <select name="id" id="id">
 FIN;
@@ -59,30 +64,57 @@ FIN;
 echo <<<FIN
                     </select>
                     </br>
+            </div>
+            </div>
+            <div class="form-group">
+                    <div class="col-md-4">
                     <label>Vote:</label>
                     <select id="choix">
                     <option value="0">0</option>
                     <option value="1">1</option>
 
                     </select>
-                    </br></br>
-                    <input type="submit" value="Chiffrer" />
-    </p>
+                    </br>
+                    </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-4">
+                            <button id="singlebutton" name="singlebutton" class="btn btn-primary">Chiffrer</button>
+                    </div>
+                </div>
+    </div>
+    </div>
+    </div>
+    </div>
     </form>
     <div id="zone-chiffre"></div>
-    
-    <form class="form-inline" action="index.php?page=votes" method="post">
-                    <label>Vote chiffré</label>
-                    <input type="text" name="vote" id="vote" class="form-control" />
-                    </br>
-                    <label>Token</label>
-                    <input type="text" name="token" id="token" class="form-control" />
-                    </br></br>
-                    <input type="hidden" name="id_Questions" class="form-control" id="id_Questions" />
-                    <input type="submit" value="Voter" />
-                </p>
+    </br>
+    <div class="container">
+    <div class="row">
+    <div class="col-md-12">
+    <div class="caption-full">
+    <form class="form-horizontal"  method="post">
+        <div class="form-group">
+            <div class="col-md-4">
+                <label>Vote chiffré</label>
+                <input type="text" name="vote" id="vote" class="form-control input-md" />
+                </br>
+                <label>Token</label>
+                <input type="text" name="token" id="token" class="form-control input-md" />
+                </br>
+                <input type="hidden" name="id_Questions" class="form-control" id="id_Questions" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-4">
+                <button id="singlebutton" name="singlebutton" class="btn btn-primary">Voter</button>
+            </div>
+        </div>
             </form>
-            
+        </div>
+        </div>
+        </div>
+        </div>
             <br />
         </p>
 

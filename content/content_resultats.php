@@ -71,7 +71,7 @@ echo <<< FIN
 <input type="hidden" placeholder="PublicKey" id="PublicKey2" name="PublicKey" class="form-control">
   <label class="col-md-4 control-label" for="textinput">Entrez la clé privée</label>  
   <div class="col-md-4">
-  <input type="text" name="secKey" class="form-control" id="secKey" placeholder="Clé privée" class="form-control input-md">
+  <input type="text" name="secKey" id="secKey" placeholder="Clé privée" class="form-control input-md">
     
   </div>
 </div>
@@ -85,12 +85,12 @@ echo <<< FIN
 
 
 <label class='col-md-3 control-label' id='choix1'></label>
-<div class='alert alert-success col-md-3' id='zone-results1'><strong></strong> </div>
+<div class='alert alert-success col-md-3' id='zone-results1'> </div>
 <label class='col-md-3 control-label' id='choix0'></label>
 
-<div class="alert alert-success col-md-3" id="zone-results0"><strong></strong> </div>
+<div class="alert alert-success col-md-3" id="zone-results0"> </div>
 <label class="col-md-3 control-label">nombre votants</label>
-<div class="alert alert-success col-md-3" id="nb-votants"><strong></strong> </div>
+<div class="alert alert-success col-md-3" id="nb-votants"> </div>
   </div>
 </div>
 

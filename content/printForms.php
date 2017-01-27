@@ -1,3 +1,4 @@
+
 <?php
 function printLoginForm($page){
     echo <<<FIN
@@ -29,4 +30,5 @@ function printLogoutForm(){
 FIN;
     
 }
+
 ?>
