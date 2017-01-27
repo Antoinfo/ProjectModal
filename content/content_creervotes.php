@@ -2,7 +2,7 @@
 
 
 if (!isset($_SESSION['loggedIn'])) {
-  echo "Page non autorisée, vous devez vous connecter pour répondre aux questions";
+  echo "Page non autorisée, vous devez vous connecter pour répondre ajouter une question";
   return;
 }
 
