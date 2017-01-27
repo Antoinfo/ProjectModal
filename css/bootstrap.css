@@ -12,6 +12,7 @@ html {
 body {
   margin: 0;
 }
+
 article,
 aside,
 details,
@@ -1086,7 +1087,12 @@ body {
   font-size: 14px;
   line-height: 1.42857143;
   color: #333;
-  background-color: #fff;
+  position: relative;
+  width: 100%;
+  min-height: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('../background-img.jpeg');
 }
 input,
 button,
