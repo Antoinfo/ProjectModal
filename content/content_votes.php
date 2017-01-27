@@ -32,13 +32,13 @@ echo <<<FIN
          </h3>
 FIN;
             echo "<div> Identifiant : ".htmlspecialchars($donnees['id_Questions'])."</div>";
-            echo "<label class='col-xs-2 control-label'>Choix 0 : </label>";
+            echo "<label class='col-xs-2 control-label'>Premier choix : </label>";
             echo "<div class='alert alert-info col-xs-1'>".htmlspecialchars($donnees['Choix0'])."</div>";
             echo "</br>";
             echo "</br>";
             echo "</br>";
             echo "</br>";
-            echo "<label class='col-xs-2 control-label'>Choix 1 : </label>";
+            echo "<label class='col-xs-2 control-label'>Deuxième choix : </label>";
             echo "<div class='alert alert-info col-xs-1'>".htmlspecialchars($donnees['Choix1'])."</div>";
             echo"</br>";
             echo"</br>";
