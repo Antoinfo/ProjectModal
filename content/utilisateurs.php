@@ -119,14 +119,14 @@ function creercompte($dbh) {
             echo"<p>login déjà utilisé !</p>";
         }
          else {
-            if (strlen($mdp)>9){
-                Utilisateur::insererUtilisateur($dbh,$login,$nom,$mdp,$email);
+            if (strlen($mdp)>7){
+                Utilisateur::insererUtilisateur($dbh,$login,$mdp,$nom,$email);
           
                 echo"<p>Vous avez créé un compte, félicitations !</p>";
              }
       
-            else if (strlen($mdp)<=9) { 
-                echo"<p>Votre mot de passe fait moins de 10 caractères</p>";
+            else if (strlen($mdp)<=8) { 
+                echo"<p>Votre mot de passe fait moins de 8 caractères</p>";
             }
       
          }

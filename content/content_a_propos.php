@@ -1,9 +1,10 @@
 <?php
 
 echo <<<FIN
+<body background="users/antonindauvin/pictures/image_de_fond_cadenas.png">
 <div class="row">
 <div class="col-md-7 col-md-offset-2">
-    <h2>Le principe</h2>
+    <h2>  Le principe</h2>
 <p>
   Notre site vous permet de créer des votes qui ne pourront pas être interceptés par quelqu'un d'autre.
 </p>
@@ -27,9 +28,13 @@ echo <<<FIN
  </p>
 </div>
 </div>
+</body>
 
- 
 FIN;
+
+
+    
+    
 ?>
 
 

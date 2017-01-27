@@ -1,9 +1,12 @@
 <?php
 $page_list= array(array("name"=>"accueil","title"=>"Accueil"), array("name"=>"a_propos","title"=>"À propos"), array("name"=>"votes","title"=>"Votes disponibles"),array("name"=>"creervotes","title"=>"Ajouter des questions"), array("name"=>"resultats","title"=>"Résultats"), array("name"=>"register","title"=>"Création d'un compte"), array("name"=>"admin","title"=>"Gestion admin du site"));
 function generateHTMLHeader($pageTitle) {
+    
+    
     echo <<<FIN
     <!DOCTYPE html>
     <html>
+    <body background="users/antonindauvin/pictures/image_de_fond_cadenas.png">
     <head>
     	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.5/angular.min.js"></script>
     <script src="js/jquery.js"></script>
@@ -27,7 +30,7 @@ function generateHTMLHeader($pageTitle) {
 		<link href="css/shop-item.css" rel="stylesheet">
             <link href="https://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
 	</head>
-   
+   </body>
        
 FIN;
 }
@@ -93,6 +96,7 @@ echo <<<FIN
     	<!-- Bootstrap Core JavaScript -->
     	<script src="js/bootstrap.min.js"></script>
 
+    
     </body>
 </html>
 FIN;

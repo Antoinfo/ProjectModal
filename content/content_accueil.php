@@ -1,10 +1,7 @@
 <?php
-
 echo <<<FIN
 <div class="container">
-
         <div class="row">
-
             <div class="bg-default" id="header">
                 <div class="container">
                     <div class="col-lg-8 col-lg-offset-2 text-center">
@@ -17,7 +14,6 @@ echo <<<FIN
             </div>
             
             </br>
-
             <section class="bg-default" id="about">
                 <div class="container">
                     <div class="row">
@@ -30,9 +26,7 @@ echo <<<FIN
                     </div>
                 </div>
             </section>
-
 			
-
             <section class="bg-default" id="contact">
                 <div class="container">
                     <div class="row">
@@ -41,15 +35,13 @@ echo <<<FIN
                             <hr class="primary">
                             <p class="text-faded">Le monde entre dans l'ère du numérique et nous vous donnons les outils pour y faire face. Appelez-nous ou envoyez nous un e-mail et nous reviendrons vers vous au plus vite.</p>
                         </div>
-                        <div class="col-lg-4 text-center">
+                        <div class="col-lg-8 col-lg-offset-2 text-center">
                             <i class="fa fa-envelope-o fa-3x sr-contact"></i>
                             <p><a href="mailto:contact@wesen.fr" >contact@voting.fr</a></p>
                         </div>
                     </div>
                 </div>
             </section>
-
     	</div>
 FIN;
 ?>
-

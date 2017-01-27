@@ -1,13 +1,14 @@
 <?php
 
 session_name("utilisateurduvote");
-    // ne pas mettre d'espace dans le nom de session !
+    
+
     session_start();
     if (!isset($_SESSION['initiated'])) {
         session_regenerate_id();
         $_SESSION['initiated'] = true;
     }
-    // Décommenter la ligne suivante pour afficher le tableau $_SESSION pour le debuggage
+    
     // print_r($_SESSION);
 require('utilities/bdd.php') ;
 require_once('utilities/utils.php');
@@ -62,7 +63,7 @@ if (isset($_SESSION["loggedIn"])) {
 if($_SESSION["loggedIn"]) {
     
     printLogoutForm();
-    // tout à l'heure on affichera le formulaire de déconnexion
+    
 } 
 }
 else {

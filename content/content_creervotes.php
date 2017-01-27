@@ -20,39 +20,44 @@ echo <<<FIN
             <div class="col-md-12">
 
                     <div class="caption-full">
-                        <h4>
-                            Rajouter une question
-                        </h4>
+                        
+                           </br>
+                            <form class action="index.php?page=creervotes" method="post" id="create-question" class="form-inline">
+                            <fieldset>
+
+                            <!-- Form Name -->
+                                <legend>Rajouter une question</legend>
                         </br>
 
 
-                            <form action="index.php?page=creervotes" method="post" id="create-question" class="form-inline">
+                           
 
                                 <div class="form-group">
                                         
                                     <label for="exampleInputName2">Question</label>
-                                    <input type="text" placeholder="Question" id="Question" name="Question" class="form-control">
+                                    <input type="text" placeholder="Votre question" id="Question" name="Question" class="form-control">
+                                  
                                     </br>
-                                    </br>
+
                                 </div>
 
 
-                                   <br> </br>
+                                 
                             
                                   <div class="form-group">
                                         
-                                    <label for="exampleInputName2">Choix0</label>
-                                    <input type="text" placeholder="Choix0" id="Choix0" name="Choix0" class="form-control">
-                                    </br>
-                                    </br>
+                                    <label for="exampleInputName2">Premier choix</label>
+                                    <input type="text" placeholder="Première réponse possible à la question" id="Choix0" name="Choix0" class="form-control">
+
+                                    
                                 </div>
 
                                 <div class="form-group">
                                         
-                                    <label for="exampleInputName2">Choix1</label>
-                                    <input type="text" placeholder="Choix1" id="Choix1" name="Choix1" class="form-control">
+                                    <label for="exampleInputName2">Deuxième choix</label>
+                                    <input type="text" placeholder="Deuxième réponse possible à la question" id="Choix1" name="Choix1" class="form-control">
                                     </br>
-                                    </br>
+
                                 </div>
 
                                 <div class="form-group">
@@ -62,12 +67,19 @@ echo <<<FIN
                                     </br>
                                 </div>
 
-                                <div class="form-group col-md-12">
+                               
+                                <div class="form-group">
+                                    <label class="col-md-12 control-label" for="singlebutton"></label>
+                                        <div class="col-md-12">
+                                            <button id="singlebutton" name="singlebutton" class="btn btn-primary">Envoyer</button>
+                                            </br></br>
+                                            
                                     </br>
-                                    <button class="btn btn-default">Envoyer</button> </br>
                                     </br>
-                                    </br>
-                                </div>
+                                        </div>
+
+                                
+                                
                             </form>
                         </div>
                         </br></br>
