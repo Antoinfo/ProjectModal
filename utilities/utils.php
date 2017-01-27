@@ -1,5 +1,5 @@
 <?php
-$page_list= array(array("name"=>"accueil","title"=>"Accueil"), array("name"=>"a_propos","title"=>"À propos"), array("name"=>"votes","title"=>"Votes disponibles"),array("name"=>"creervotes","title"=>"Ajouter des questions"), array("name"=>"resultats","title"=>"Résultats"), array("name"=>"register","title"=>"Création d'un compte"), array("name"=>"admin","title"=>"Gestion admin du site"));
+$page_list= array(array("name"=>"accueil","title"=>"Accueil"), array("name"=>"a_propos","title"=>"À propos"), array("name"=>"votes","title"=>"Votes disponibles"),array("name"=>"creervotes","title"=>"Créer un vote"), array("name"=>"resultats","title"=>"Résultats"), array("name"=>"register","title"=>"Création d'un compte"), array("name"=>"admin","title"=>"Gestion admin du site"));
 function generateHTMLHeader($pageTitle) {
     
     

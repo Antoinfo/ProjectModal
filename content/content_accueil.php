@@ -21,7 +21,20 @@ echo <<<FIN
                             <h2 class="section-heading">Tout pour la confiance numérique</h2>
                             <hr class="light">
                             <p class="text-faded">Voting permet de voter de façon complètement opaque et sécurisée.</p>
-                            <a href="#services" class="page-scroll btn btn-default btn-xl sr-button">Commencer!</a>
+                            <a href='index.php?page=register' class="page-scroll btn btn-default btn-xl sr-button">Commencer !</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        <section class="bg-default" id="about">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2 text-center">
+                            <h2 class="section-heading">Répondez à un vote de manière sécurisée et anonyme</h2>
+                            <hr class="light">
+                            <p class="text-faded">Voting permet de voter de façon complètement opaque et sécurisée.</p>
+                            <a href='index.php?page=votes' class="page-scroll btn btn-default btn-xl sr-button">Votez !</a>
                         </div>
                     </div>
                 </div>
