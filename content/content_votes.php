@@ -11,40 +11,48 @@ FIN;
 
         // On récupère les 5 derniers billets
         $req = $dbh->query('SELECT id_Questions, Question, publicKey, Choix0, Choix1 FROM Questions ORDER BY id_Questions DESC');
+echo <<<FIN
+        
+        <div class="container">
+            <div class="row">
+            <div class="col-md-12">
+            <div class="caption-full">
+            <div class="form-group">
+FIN;
 
         while ($donnees = $req->fetch())
         {
 
 echo <<<FIN
-    <div class="news">
-        
         
         <h3>
 FIN;
          echo htmlspecialchars($donnees['Question']); 
 echo <<<FIN
          </h3>
-        
-        <p>
-            
-            
-            <p> Choix 0 :
 FIN;
-            echo htmlspecialchars($donnees['Choix0']);
-            echo "</p>";
-            echo"<p> Choix 1 :";
-            echo htmlspecialchars($donnees['Choix1']);
-            echo "</p>";
-            echo"<p> Identifiant :";
-            echo htmlspecialchars($donnees['id_Questions']); 
+            echo "<div> Identifiant : ".htmlspecialchars($donnees['id_Questions'])."</div>";
+            echo "<label class='col-xs-2 control-label'>Choix 0 : </label>";
+            echo "<div class='alert alert-info col-xs-1'>".htmlspecialchars($donnees['Choix0'])."</div>";
+            echo "</br>";
+            echo "</br>";
+            echo "</br>";
+            echo "</br>";
+            echo "<label class='col-xs-2 control-label'>Choix 1 : </label>";
+            echo "<div class='alert alert-info col-xs-1'>".htmlspecialchars($donnees['Choix1'])."</div>";
+            echo"</br>";
+            echo"</br>";
+            echo"</br>";
+            echo"</br>";
             } // Fin de la boucle des billets
     $req->closeCursor();
-    echo "</div>";
     $req = $dbh->query('SELECT id_Questions, Choix0, Choix1 FROM Questions ORDER BY id_Questions DESC');
 echo <<<FIN
             
-            </p>
-
+        </div>
+        </div>
+        </div>
+        </div>
         </br></br>
             <div class="container">
             <div class="row">
