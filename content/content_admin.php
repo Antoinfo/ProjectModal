@@ -9,24 +9,37 @@ if (isset($_SESSION['loggedIn'])) {
   return;
     }
   
-echo "</br></br></br></br> Bonjour admin";
+echo "</br></br></br></br>Bonjour admin";
 
 $adminlvl=Utilisateur::getaccesslvl($dbh, $_SESSION["login"]);
-echo "</br></br></br></br> Votre niveau d'admin est : " ;
+echo "</br></br></br></br>Votre niveau d'admin est : " ;
 echo $adminlvl;
 
 
 echo <<<FIN
     </br>
-    </br>
-    </br>
-    
-<form class action="index.php?todo=detruireutilisateur" method="post" id="destroy-user" class="form-inline">
+
+
+<div class="col-md-12">
+
+                    <div class="caption-full">
+                        
+                           </br>
+                              
+                            <form class action="index.php?todo=detruireutilisateur" method="post" id="destroy-user" >
                             <fieldset>
+
+                            <!-- Form Name -->
+                                <legend>Détruire un compte</legend>
+                        </br>
+    
+    
+
+                           
 
  <div class="form-group">
                                         
-                                    <label for="exampleInputName2">Login</label>
+                                    <label for="login">Login</label>
                                     <input type="text" placeholder="Utilisateur que vous souhaitez supprimer"  name="login" required class="form-control">
                                   
                                     </br>
@@ -42,7 +55,11 @@ echo <<<FIN
                                     </br>
                                         </div>
  
-  </form>
+
+                                 </fieldset>
+                                </form>
+            </div>
+            </div>
 FIN;
 
 
