@@ -41,7 +41,7 @@ echo <<<FIN
                             <hr class="primary">
                             <p class="text-faded">Le monde entre dans l'ère du numérique et nous vous donnons les outils pour y faire face. Appelez-nous ou envoyez nous un e-mail et nous reviendrons vers vous au plus vite.</p>
                         </div>
-                        <div class="col-lg-4 text-center">
+                        <div class="col-lg-8 col-lg-offset-2 text-center">
                             <i class="fa fa-envelope-o fa-3x sr-contact"></i>
                             <p><a href="mailto:contact@wesen.fr" >contact@voting.fr</a></p>
                         </div>

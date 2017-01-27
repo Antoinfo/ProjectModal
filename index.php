@@ -57,7 +57,7 @@ if (array_key_exists('todo', $_GET)){
     }
     }
 }
-
+generateHTMLHeader($pageTitle);
 if (isset($_SESSION["loggedIn"])) {
 if($_SESSION["loggedIn"]) {
     
@@ -69,8 +69,6 @@ else {
     printLoginForm($askedPage);
 }
     
-
-generateHTMLHeader($pageTitle);
 generateMenu($askedPage);
 
 
