@@ -103,6 +103,51 @@ echo <<<FIN
                                 </form>
             </div>
             </div>
+
+
+
+
+<div class="col-md-12">
+
+                    <div class="caption-full">
+                        
+                           </br>
+                              
+                            <form class action="index.php?todo=detruirevote" method="post" id="destroy-vote" >
+                            <fieldset>
+
+                            <!-- Form Name -->
+                                <legend>Supprimer un vote</legend>
+                        </br>
+    
+    
+
+                           
+
+ <div class="form-group">
+                                        
+                                    <label for="vote">Token du vote</label>
+                                    <input type="text" placeholder="Token du vote que vous souhaitez supprimer"  name="vote" required class="form-control">
+                                  
+                                    </br>
+
+                                </div>
+
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="singlebutton"></label>
+  <div class="col-md-4">
+    <button id="singlebutton" name="singlebutton" class="btn btn-primary"><span class="fa fa-bomb fa-2x"></span></button>
+</br></br>
+   
+                                        </div>
+ 
+
+                                 </fieldset>
+                                </form>
+            </div>
+            </div>
+
 FIN;
 
 
