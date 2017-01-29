@@ -8,7 +8,7 @@ echo <<<FIN
                         <h1 id="homeHeading">Vote sécurisé - Voting</h1>
                         <hr>
                         <p>Voting permet de voter de façon complètement opaque et sécurisée.</p>
-                        <a href="content/content_a_propos.php" class="btn btn-default btn-xl page-scroll">En savoir plus</a>
+                        <a href='index.php?page=a_propos' class="btn btn-default btn-xl page-scroll">En savoir plus</a>
                     </div>
                 </div>
             </div>
