@@ -99,6 +99,7 @@ public static function deleteQuestion($dbh, $identifiant){
 class Tokens {
 public $id_Quesions;
 public $token;
+public $used;
 
 
 public static function getToken($dbh, $token) {
