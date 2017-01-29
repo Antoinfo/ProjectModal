@@ -77,9 +77,23 @@ $sth = $dbh->prepare($query);
 $sth->setFetchMode(PDO::FETCH_CLASS, 'Questions');
 $sth->execute(array($Question, $publicKey, $Choix0, $Choix1));
 $sth->closeCursor();
+}
+
+public static function deleteQuestion($dbh, $identifiant){
+    $query = "DELETE FROM `Questions`WHERE `id_Questions`=?";
+        $sth = $dbh->prepare($query);
+        $sth->execute(array($identifiant));
+        
+    }
+
 
 }
-}
+
+
+  function detruirequestion($dbh, $login){
+      Questions::deleteQuestion($dbh,$login);
+      
+  }
 class Tokens {
 public $id_Quesions;
 public $token;

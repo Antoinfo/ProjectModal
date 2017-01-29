@@ -58,6 +58,16 @@ if (array_key_exists('todo', $_GET)){
     }
     }
 }
+
+if (array_key_exists('todo', $_GET)){
+    if (isset($_POST['question'])){
+    if ($_GET['todo']=="detruirequestion") {
+        detruireQuestion($dbh, $_POST['question']);
+        
+    }
+    }
+}
+
 generateHTMLHeader($pageTitle);
 if (isset($_SESSION["loggedIn"])) {
 if($_SESSION["loggedIn"]) {
