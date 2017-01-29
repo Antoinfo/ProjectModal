@@ -60,6 +60,49 @@ echo <<<FIN
                                 </form>
             </div>
             </div>
+
+
+
+<div class="col-md-12">
+
+                    <div class="caption-full">
+                        
+                           </br>
+                              
+                            <form class action="index.php?todo=detruirequestion" method="post" id="destroy-question" >
+                            <fieldset>
+
+                            <!-- Form Name -->
+                                <legend>Supprimer une question</legend>
+                        </br>
+    
+    
+
+                           
+
+ <div class="form-group">
+                                        
+                                    <label for="question">Identifiant de la question</label>
+                                    <input type="text" placeholder="Identifiant de la question que vous souhaitez supprimer"  name="question" required class="form-control">
+                                  
+                                    </br>
+
+                                </div>
+
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="singlebutton"></label>
+  <div class="col-md-4">
+    <button id="singlebutton" name="singlebutton" class="btn btn-primary"><span class="fa fa-bomb fa-2x"></span></button>
+</br></br>
+   
+                                        </div>
+ 
+
+                                 </fieldset>
+                                </form>
+            </div>
+            </div>
 FIN;
 
 

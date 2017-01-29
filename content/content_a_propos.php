@@ -8,7 +8,7 @@ echo <<<FIN
 <p>
   Notre site vous permet de créer des votes qui ne pourront pas être interceptés par quelqu'un d'autre.
 </p>
-<p> En effet, vous choissisez: <p>-la ou les questions que vous désirez poser.</p>
+<p> En effet, vous choississez: <p>-la ou les questions que vous désirez poser.</p>
    <p> -l'ensemble des indivus que vous désirez soumettre au test.</p> 
 <p> Puis en envoyant un lien à l'ensemble des votants (éventuellement modifier cette partie: envoie direct et création du token après envoie et non avant ?), vous leur permettez d'aller répondre à vos questions et de soumettre leur vote.</p>
 <p></p>

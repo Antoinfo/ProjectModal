@@ -8,7 +8,7 @@ function generateHTMLHeader($pageTitle) {
     <html>
     <body background="users/antonindauvin/pictures/image_de_fond_cadenas.png">
     <head>
-    	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.5/angular.min.js"></script>
+    
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
     
