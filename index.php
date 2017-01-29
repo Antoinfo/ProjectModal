@@ -12,8 +12,8 @@ session_name("utilisateurduvote");
     // print_r($_SESSION);
 require('utilities/bdd.php') ;
 require_once('utilities/utils.php');
-require('content/printForms.php') ;
-require('content/utilisateurs.php') ;
+require('utilities/printForms.php') ;
+require('utilities/utilisateurs.php') ;
 
 
 if (isset($_GET['page'])) {
