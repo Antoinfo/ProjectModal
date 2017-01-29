@@ -1092,7 +1092,7 @@ body {
   min-height: auto;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url('../background-img.jpeg');
+  background-image: url('../img/background-img.jpeg');
 }
 input,
 button,
