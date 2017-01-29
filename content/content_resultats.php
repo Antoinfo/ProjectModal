@@ -5,11 +5,7 @@ require_once('utilities/bdd.php');
 echo <<<FIN
 <div class="container">
 
-        <div class="row">
-
-             </br></br>  
-            
-
+        <div class="row"> 
             <div class="col-md-12">
 
                     <div class="caption-full">
@@ -72,25 +68,19 @@ echo <<< FIN
   <div class="col-md-4">
   <input type="text" name="secKey" id="secKey" placeholder="Clé privée" class="form-control input-md">
     
-  </div>
-</div>
-
-<!-- Button -->
-<div class="form-group">
-  <div class="col-md-4">
+    </br>
     <button name="singlebutton" class="btn btn-primary"><span class="fa fa-lock fa-2x"></span></button>
-</br></br>
+</br>
+<label class='control-label' id='choix1'></label>
+<div class='alert alert-success' id='zone-results1'> </div>
+<label class='control-label' id='choix0'></label>
 
-
-<label class='col-md-3 control-label' id='choix1'></label>
-<div class='alert alert-success col-md-3' id='zone-results1'> </div>
-<label class='col-md-3 control-label' id='choix0'></label>
-
-<div class="alert alert-success col-md-3" id="zone-results0"> </div>
-<label class="col-md-3 control-label">nombre votants</label>
-<div class="alert alert-success col-md-3" id="nb-votants"> </div>
+<div class="alert alert-success" id="zone-results0"> </div>
+<label class="control-label">nombre votants</label>
+<div class="alert alert-success" id="nb-votants"> </div>
   </div>
 </div>
+
 
 </fieldset>
 </form>
