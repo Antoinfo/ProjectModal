@@ -87,14 +87,14 @@ echo <<<FIN
                     </div>
                     <div class="form-group">
                         <div class="col-md-4">
-                            <button id="singlebutton" name="singlebutton" class="btn btn-primary">Chiffrer</button>
+                            <button name="singlebutton" class="btn btn-primary">Chiffrer</button>
                     </div>
                 </div>
-    </div>
-    </div>
-    </div>
-    </div>
     </form>
+    </div>
+    </div>
+    </div>
+    </div>
     <div id="zone-chiffre"></div>
     </br>
     <div class="container">
@@ -115,7 +115,7 @@ echo <<<FIN
         </div>
         <div class="form-group">
             <div class="col-md-4">
-                <button id="singlebutton" name="singlebutton" class="btn btn-primary">Voter</button>
+                <button name="singlebutton" class="btn btn-primary">Voter</button>
             </div>
         </div>
             </form>
@@ -124,7 +124,6 @@ echo <<<FIN
         </div>
         </div>
             <br />
-        </p>
 
     </div>
             
@@ -140,13 +139,6 @@ FIN;
             // Testons si le fichier n'est pas trop gros
             Votes::addVotes($_POST['vote'], $_POST['token'], $_POST['id_Questions']);
     }
-
-                    
-    echo("</div>");
-
-    echo("</div>");
-    
-
 ?>
 
 

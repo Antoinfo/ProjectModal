@@ -1,7 +1,6 @@
 <?php
 
 echo <<<FIN
-<body background="users/antonindauvin/pictures/image_de_fond_cadenas.png">
 <div class="row">
 <div class="col-md-7 col-md-offset-2">
     <h2>  Le principe</h2>
@@ -25,10 +24,8 @@ echo <<<FIN
 <p>Il entre alors sa clé privée et clique sur Déchiffrer.</p>
 <p>Il obtient finalement la somme des votes et le détail de ces derniers.</p>
 
- </p>
 </div>
 </div>
-</body>
 
 FIN;
 

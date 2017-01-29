@@ -22,7 +22,8 @@ echo <<<FIN
                     <div class="caption-full">
                         
                            </br>
-                            <form class action="index.php?page=creervotes" method="post" id="create-question" class="form-inline">
+                           <div class="form-group">
+                            <form action="index.php?page=creervotes" method="post" id="create-question" class="form-horizontal">
                             <fieldset>
 
                             <!-- Form Name -->
@@ -34,7 +35,7 @@ echo <<<FIN
 
                                 <div class="form-group">
                                         
-                                    <label for="exampleInputName2">Question</label>
+                                    <label>Question</label>
                                     <input type="text" placeholder="Votre question" id="Question" name="Question" class="form-control">
                                   
                                     </br>
@@ -46,15 +47,15 @@ echo <<<FIN
                             
                                   <div class="form-group">
                                         
-                                    <label for="exampleInputName2">Premier choix</label>
+                                    <label>Premier choix</label>
                                     <input type="text" placeholder="Première réponse possible à la question" id="Choix0" name="Choix0" class="form-control">
 
-                                    
+                                    </br>
                                 </div>
 
                                 <div class="form-group">
                                         
-                                    <label for="exampleInputName2">Deuxième choix</label>
+                                    <label>Deuxième choix</label>
                                     <input type="text" placeholder="Deuxième réponse possible à la question" id="Choix1" name="Choix1" class="form-control">
                                     </br>
 
@@ -62,25 +63,24 @@ echo <<<FIN
 
                                 <div class="form-group">
                                         
-                                    <input type="hidden" placeholder="PublicKey" id="PublicKey" name="PublicKey" class="form-control">
+                                    <input type="hidden" id="PublicKey" name="PublicKey" class="form-control">
                                     </br>
                                     </br>
                                 </div>
 
                                
                                 <div class="form-group">
-                                    <label class="col-md-12 control-label" for="singlebutton"></label>
-                                        <div class="col-md-12">
-                                            <button id="singlebutton" name="singlebutton" class="btn btn-primary">Envoyer</button>
+                                            <button name="singlebutton" class="btn btn-primary">Envoyer</button>
                                             </br></br>
                                             
                                     </br>
                                     </br>
                                         </div>
-
-                                
-                                
+                                </fieldset>
                             </form>
+                            </div>
+                        </div>
+                        </div>
                         </div>
                         </br></br>
 
@@ -104,12 +104,6 @@ FIN;
     //        Questions::addQuestions($dbh, $_POST['Question'], $_POST['publicKey']);
     //}
 
-    
-   
-                    
-    echo("</div>");
-
-    echo("</div>");
     
 
 ?>

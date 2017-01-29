@@ -22,17 +22,17 @@ echo <<<FIN
 
                             <!-- Text input-->
                                 <div class="form-group">
-                                     <label class="col-md-4 control-label" for="textinput">Entrez l'identifiant de votre question</label>  
+                                     <label class="col-md-4 control-label">Entrez l'identifiant de votre question</label>  
                                         <div class="col-md-4">
-                                            <input type="number" placeholder="Identifiant" id="id" name="id" placeholder="Identifiant" class="form-control input-md">   
+                                            <input type="number" placeholder="Identifiant" id="id" name="id" class="form-control input-md">   
                                         </div>
                                 </div>
 
                             <!-- Button -->
                                 <div class="form-group">
-                                    <label class="col-md-4 control-label" for="singlebutton"></label>
+                                    <label class="col-md-4 control-label"></label>
                                         <div class="col-md-4">
-                                            <button id="singlebutton" name="singlebutton" class="btn btn-primary">Afficher</button>
+                                            <button name="singlebutton" class="btn btn-primary">Afficher</button>
                                             </br></br>
                                             <div class="alert alert-success  zone-resultats" id="zone-resultats"></div>
                                         </div>
@@ -49,7 +49,6 @@ FIN;
 
 
 echo <<< FIN
-</p>
                 </br>
                 </br>
                 </div>
@@ -68,8 +67,8 @@ echo <<< FIN
 <!-- Text input-->
 <div class="form-group">
 <input type="hidden" name="input-resultats" class="form-control" id="input-resultats" />
-<input type="hidden" placeholder="PublicKey" id="PublicKey2" name="PublicKey" class="form-control">
-  <label class="col-md-4 control-label" for="textinput">Entrez la clé privée</label>  
+<input type="hidden" id="PublicKey2" name="PublicKey" class="form-control">
+  <label class="col-md-4 control-label">Entrez la clé privée</label>  
   <div class="col-md-4">
   <input type="text" name="secKey" id="secKey" placeholder="Clé privée" class="form-control input-md">
     
@@ -78,9 +77,8 @@ echo <<< FIN
 
 <!-- Button -->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="singlebutton"></label>
   <div class="col-md-4">
-    <button id="singlebutton" name="singlebutton" class="btn btn-primary"><span class="fa fa-lock fa-2x"></span></button>
+    <button name="singlebutton" class="btn btn-primary"><span class="fa fa-lock fa-2x"></span></button>
 </br></br>
 
 
@@ -100,15 +98,11 @@ echo <<< FIN
 </div>
             </br>
 			</br>
-
-
-</p>
    
                 </div>
 
     	</div>
- </div>
-</div>
+
 
 FIN;
 ?>

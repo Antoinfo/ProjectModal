@@ -39,22 +39,22 @@ echo <<<FIN
 
  <div class="form-group">
                                         
-                                    <label for="login">Login</label>
+                                    <label>Login</label>
                                     <input type="text" placeholder="Utilisateur que vous souhaitez supprimer"  name="login" required class="form-control">
                                   
                                     </br>
 
                                 </div>
     <div class="form-group">
-                                    <label class="col-md-12 control-label" for="singlebutton"></label>
+                                    <label class="col-md-12 control-label"></label>
                                         <div class="col-md-12">
-                                            <button id="singlebutton" name="singlebutton" class="btn btn-primary">Détruire utilisateur</button>
+                                            <button name="singlebutton" class="btn btn-primary">Détruire utilisateur</button>
                                             </br></br>
                                             
                                     </br>
                                     </br>
                                         </div>
- 
+                                        </div>
 
                                  </fieldset>
                                 </form>
@@ -82,7 +82,7 @@ echo <<<FIN
 
  <div class="form-group">
                                         
-                                    <label for="question">Identifiant de la question</label>
+                                    <label>Identifiant de la question</label>
                                     <input type="text" placeholder="Identifiant de la question que vous souhaitez supprimer"  name="question" required class="form-control">
                                   
                                     </br>
@@ -91,14 +91,13 @@ echo <<<FIN
 
 
 <div class="form-group">
-  <label class="col-md-4 control-label" for="singlebutton"></label>
+  <label class="col-md-4 control-label"></label>
   <div class="col-md-4">
-    <button id="singlebutton" name="singlebutton" class="btn btn-primary"><span class="fa fa-bomb fa-2x"></span></button>
+    <button name="singlebutton" class="btn btn-primary"><span class="fa fa-bomb fa-2x"></span></button>
 </br></br>
    
                                         </div>
- 
-
+                                        </div>
                                  </fieldset>
                                 </form>
             </div>

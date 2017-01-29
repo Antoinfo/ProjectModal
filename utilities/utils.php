@@ -6,7 +6,6 @@ function generateHTMLHeader($pageTitle) {
     echo <<<FIN
     <!DOCTYPE html>
     <html>
-    <body background="users/antonindauvin/pictures/image_de_fond_cadenas.png">
     <head>
     
     <script src="js/jquery.js"></script>
@@ -37,7 +36,7 @@ FIN;
 function generateMenu($askedPage){
     global $page_list;
 echo <<<FIN
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
         		<div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
