@@ -13,7 +13,7 @@ session_name("utilisateurduvote");
 require('utilities/bdd.php') ;
 require_once('utilities/utils.php');
 require('utilities/printForms.php') ;
-require('utilities/utilisateurs.php') ;
+
 
 
 if (isset($_GET['page'])) {
@@ -63,6 +63,15 @@ if (array_key_exists('todo', $_GET)){
     if (isset($_POST['question'])){
     if ($_GET['todo']=="detruirequestion") {
         detruireQuestion($dbh, $_POST['question']);
+        
+    }
+    }
+}
+
+if (array_key_exists('todo', $_GET)){
+    if (isset($_POST['vote'])){
+    if ($_GET['todo']=="detruirevote") {
+        detruireVote($dbh, $_POST['vote']);
         
     }
     }
